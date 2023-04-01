@@ -1,0 +1,583 @@
+@font-face {
+  font-family: "TTNorms";
+  src: url(fonts/TTNorms-Regular.otf);
+}
+@font-face {
+  font-family: "TTNorms Medium";
+  src: url(fonts/TTNorms-Medium.otf);
+}
+@font-face {
+  font-family: "TTNorms Light";
+  src: url(fonts/TTNorms-Light.otf);
+}
+@font-face {
+  font-family: "Times";
+  src: url(fonts/Times-new-roman-italic.ttf);
+}
+/* normalize.css */
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  body {
+    margin: 0;
+  }
+  main {
+    display: block;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  a {
+    background-color: transparent;
+  }
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  b,strong {
+    font-weight: bolder;
+  }
+  
+  code,kbd,samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  small {
+    font-size: 80%;
+  }
+  
+  
+  sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  img {
+    border-style: none;
+  }
+  
+  button,input,optgroup,select,textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  button,input { /* 1 */
+    overflow: visible;
+  }
+  
+  button,select { /* 1 */
+    text-transform: none;
+  }
+  button::-moz-focus-inner,[type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  button:-moz-focusring,[type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  textarea {
+    overflow: auto;
+  }
+  [type="checkbox"],[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [type="search"] {
+    outline-offset: -2px; /* 2 */
+  }
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  details {
+    display: block;
+  }
+  summary {
+    display: list-item;
+  }
+  template {
+    display: none;
+  }
+  
+  [hidden] {
+    display: none;
+  }
+  /* my css */
+  /* header */
+  .html {
+    box-sizing: border-box;
+  }
+  .container {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    animation: logo-load 400ms ease-in;
+  }
+  .logo-img {
+    font-size: 3rem;
+  }
+  .logo-text {
+    text-transform: uppercase;
+    font-family: "TTNorms Light";
+    margin-left: 1rem;
+  }
+  .menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #6b6f71;
+    border-bottom: 1px solid #6b6f71;
+    padding-top: 1rem;
+    animation: nav-load 400ms ease-in;
+  }
+  .menu-item {
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+  }
+  .menu-link {
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+    font-family: "TTNorms Medium";
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  .menu-link:hover {
+    color: #2596be;
+  }
+  .header-bottom {
+    background-image: url(images/rainypic1.jpg);
+    max-width: 100%;
+  }
+  .header-bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10rem 0;
+    color: #000;
+  }
+  .header-bottom-title {
+    text-transform: capitalize;
+    font-family: "TTNorms Light";
+  }
+  .header-bottom-text {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-family: "TTNorms Medium";
+  }
+  /* main */
+  
+  .main-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+  .box {
+    flex-basis: 36rem;
+  }
+  .main-top-box-title {
+    display: flex;
+    align-items: center;
+  }
+  .main-top-box-title-logo {
+    font-size: 6rem;
+  }
+  .main-top-box-title-text {
+    margin-left: 2.5rem;
+    color: #4e5156;
+    font-family: "TTNorms Light";
+    font-size: 2.6rem;
+  }
+  .main-top-box-text {
+    line-height: 1.6rem;
+    font-family: "TTNorms Light";
+    font-weight: bold;
+    margin-top: 3rem;
+    word-spacing: 0.1rem;
+  }
+  .main-middle {
+    background-image: url(images/sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter:grayscale(0.65);
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 7rem;
+  }
+  .main-middle:hover {
+    filter: grayscale(0);
+  }
+  .main-middle-content {
+    color: #fff;
+    text-transform: capitalize;
+    font-family: "TTNorms Medium";
+    font-weight: lighter;
+    text-align: center;
+    padding: 7rem 0;
+  }
+  .main-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 8rem;
+  }
+  .activity-box {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    justify-content: center;
+    flex-basis: 36rem;
+    margin-bottom: 5rem;
+    border: 1px solid #E0E0E0;
+    padding: 1.5rem 0.5rem;
+  }
+  .box-img {
+    flex-basis: 23rem;
+  }
+  .box-img-img {
+    width: 100%;
+    transition: 0.3s;
+  }
+  .box-img-img:hover {
+    transform: scale(0.9);
+  }
+  .box-context {
+    flex-basis: 32rem;
+    margin-left: 2rem;
+  }
+  .box-context-title {
+    color: #2596be;
+    font-family: "TTNorms Medium";
+    font-weight: lighter;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .box-context-text {
+    line-height: 1.7rem;
+    font-family: "TTNorms Light";
+    font-weight: 600;
+    max-width: 28rem;
+  }
+  .our-company {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  .company-info {
+    display: flex;
+    align-items: flex-start;
+    flex-basis: 65rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .company-img {
+    max-width: 36rem;
+  }
+  .company-img-img {
+    width: 100%;
+  }
+  .company-context {
+    flex-basis: 25rem;
+    margin-left: 2.5rem;
+  }
+  .company-context-title {
+    text-transform: capitalize;
+    font-family: "TTNorms Light";
+    font-size: 2.3rem;
+    margin-top: 0;
+    color: #757575;
+    word-spacing: 0.5rem;
+  }
+  .company-context-text {
+    line-height: 1.6rem;
+    font-family: "TTNorms Light";
+    font-size: 1.13rem;
+    margin-top: 3rem;
+  }
+  .company-context-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.9rem 2rem;
+    border-radius: 0.15rem;
+    border: 0.95px solid #BDBDBD;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #757575;
+    cursor: pointer;
+  }
+  /* footer */
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 8rem;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 30rem;
+  }
+  .footer-form-title {
+    text-transform: capitalize;
+    font-family: "TTNorms Light";
+    color: #757575;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  .footer-form-input {
+    margin-bottom: 1rem;
+  }
+  .footer-form-input>input[type="text"],[type="email"],textarea {
+    width: 20rem;
+    padding: 1rem 1rem;
+    border: 0.95px solid #BDBDBD;
+    outline: none;
+    font-family: "TTNorms Light";
+  }
+  .footer-form-btn {
+    padding: 0.6rem 2rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    border-radius: 0.2rem;
+    border: 0.95px solid #BDBDBD;
+    color: #757575;
+    font-family: "TTNorms";
+    margin-top: 1rem;
+  }
+  .location-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45rem;
+  }
+  .location-content-img {
+    max-width: 52rem;
+  }
+  .location-img-img {
+    width: 100%;
+  }
+  .location-content-text {
+    margin-top: 1.7rem;
+    line-height: 1.7rem;
+    font-family: "TTNorms Medium";
+    color: #757575;
+  }
+  .footer-bottom {
+    margin-top: 3rem;
+  }
+  .copyright {
+    color: #757575;
+  }
+  /* animations */
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes logo-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+@media only screen and (max-width:1270px) {
+  .container {
+    max-width: 62rem;
+  }
+  .box {
+    margin-bottom: 5rem;
+    flex-basis: 24rem;
+  }
+  .main-top-box-title-text {
+    font-size: 2rem;
+  }
+  .main-middle {
+    margin-top: 2rem;
+  }
+  .main-bottom {
+    margin-top: 5rem;
+  }
+  .activity-box {
+    flex-wrap: wrap;
+    flex-basis: 22rem;
+    margin-bottom: 3rem;
+  }
+  .box-img {
+    flex-basis: 18rem;
+  }
+  .company-info {
+    justify-content: space-around;
+  }
+  .company-img {
+    flex-basis: 30rem;
+  }
+  .company-context-text {
+    margin-top: -0.5rem;
+  }
+  .company-context-btn {
+    padding: 0.5rem 1rem;
+  }
+  .footer-top {
+    justify-content: space-between;
+  }
+  .footer-form {
+    align-items: flex-start;
+    flex-basis: 22rem;
+  }
+  .location-content {
+    flex-basis: 32rem;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+}
+@media only screen and (max-width:992px) {
+  .container {
+    max-width: 45rem;
+  }
+  .box {
+    flex-basis: 17rem;
+  }
+  .main-top-box-title-logo {
+    font-size: 3.5rem;
+  }
+  .main-top-box-title-text {
+    font-size: 1.5rem;
+    font-family: "TTNorms";
+    margin-left: 1.5rem;
+  }
+  .activity-box {
+    flex-basis: 18rem;
+  }
+  .company-context {
+    margin-top: 2.5rem;
+  }
+  .footer-top {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .footer-bottom {
+    margin-top: 4rem;
+  }
+}
+@media only screen and (max-width:768px) {
+  .container {
+    max-width: 40rem;
+  }
+  .box {
+    flex-basis: 15rem;
+  }
+  .main-top-box-title-text {
+    font-size: 1.4rem;
+  }
+  .activity-box {
+    flex-basis: 32rem;
+  }
+  .box-img {
+    flex-basis: 20rem;
+  }
+  .company-context-btn {
+    right: 6rem;
+    bottom: -2rem;
+  }
+}
+@media only screen and (max-width:576px) {
+  .container {
+    max-width: 27rem;
+  }
+  .box {
+    flex-basis: 27rem;
+  }
+  .activity-box {
+    flex-basis: 22rem;
+  }
+  .box-img {
+    flex-basis: 18rem;
+  }
+  .company-img {
+    flex-basis: 25rem;
+  }
+  .company-context-btn {
+    display: none;
+  }
+  .footer-bottom {
+    margin-top: 5rem;
+  }
+}
